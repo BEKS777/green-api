@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green API Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="file"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #ccc;
+        }
+        .result {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Green API Demo</h1>
+        <div class="form-group">
+            <label for="idInstance">idInstance</label>
+            <input type="text" id="idInstance" required>
+        </div>
+        <div class="form-group">
+            <label for="apiTokenInstance">ApiTokenInstance</label>
+            <input type="text" id="apiTokenInstance" required>
+        </div>
+        <button id="getSettings">getSettings</button>
+        <button id="getStateInstance">getStateInstance</button>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4"></textarea>
+            <button id="sendMessage">sendMessage</button>
+        </div>
+        <div class="form-group">
+            <label for="fileUrl">File URL</label>
+            <input type="text" id="fileUrl">
+            <button id="sendFileByUrl">sendFileByUrl</button>
+        </div>
+        <div id="result" class="result" readonly></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
